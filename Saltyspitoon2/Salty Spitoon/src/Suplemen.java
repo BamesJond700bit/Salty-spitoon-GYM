@@ -5,13 +5,7 @@ import java.util.ArrayList;
 
     public String harga;
 
-    public void setHarga(String harga){
-        this.harga = harga;
-    }
 
-    public  String getHarga(){
-        return harga;
-    }
 
 
 

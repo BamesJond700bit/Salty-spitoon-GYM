@@ -33,6 +33,12 @@ public class Main {
                     case 6:
                         showSuplemens();
                         break;
+                    case 7:
+                        sellSuplemen();
+                        break;
+                    case 8:
+                         gymTrainer();
+                        break;
                     default:
                         throw new IllegalArgumentException("input yang bener bang");
                 }
@@ -160,22 +166,43 @@ public class Main {
         System.out.print("nama : ");
         suplemen.name = scan.next();
         System.out.println("Harga : ");
-        suplemen.setHarga(scan.next());
+        suplemen.harga = (scan.next());
         gym.addSuplemen(suplemen);
     }
 
     public static void showSuplemens() {
         for (Suplemen suplemen : gym.suplemens) {
             System.out.println(suplemen.id + " " + suplemen.name);
-            System.out.println(suplemen.getHarga());
+            System.out.println(suplemen.harga);
         }
     }
 
     public static void sellSuplemen() {
-        System.out.println("Masukkan id suplemen yang ingin dihapus :");
+        System.out.println("Masukkan id suplemen yang ingin dijual :");
         int id = scan.nextInt();
-        gym.members.remove(id - 1);
+        gym.suplemens.remove(id - 1);
+        if(gym.suplemens==null){
+            System.out.println("STOK QUASONG !");
+        }else{
+            showSuplemens();
+        }
     }
+   public static void gymTrainer(){
 
+        Gymtrainer trainer1 = new FitnessTrainer("Larry",5);
+       Gymtrainer trainer2 = new Yogatrainer("Sandy" ,10);
+
+       System.out.println("Pelatih 1 :");
+       System.out.println("Nama :" + trainer1.name);
+       System.out.println("Pengalaman : "+trainer1.Tahunpengalaman+"tahun");
+       trainer1.sesiPelatihan();
+
+       System.out.println("------------------------------------------");
+
+       System.out.println("Pelatih 2 :");
+       System.out.println("Nama :"+trainer2.name);
+       System.out.println("Pengalaman :"+trainer2.Tahunpengalaman+"tahun");
+       trainer2.sesiPelatihan();
+   }
 }
 
