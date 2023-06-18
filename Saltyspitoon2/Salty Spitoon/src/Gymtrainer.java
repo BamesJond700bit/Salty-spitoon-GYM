@@ -8,6 +8,8 @@ public abstract class Gymtrainer {
         this.Tahunpengalaman = Tahunpengalaman;
     }
 
+
+
     public abstract void sesiPelatihan();
 
 }

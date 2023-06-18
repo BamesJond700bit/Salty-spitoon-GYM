@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-class Gym  {
+class Gym extends Member {
 
 
     public ArrayList<Member> members = new ArrayList<>();
@@ -40,5 +40,14 @@ class Gym  {
         return false;
     }
 
-
+    @Override
+    public void Jadwal() {
+        System.out.println("============================");
+        System.out.println("  JADWAL PELATIHAN YOGA     ");
+        System.out.println("============================");
+        System.out.println("|Senin  |   16.00–18.00    |");
+        System.out.println("|Rabu   |   16.00–18.00    |");
+        System.out.println("|Jumat  |   10.00–12.00    |");
+        System.out.println("============================");
+    }
 }

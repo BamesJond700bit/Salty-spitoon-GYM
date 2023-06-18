@@ -39,6 +39,9 @@ public class Main {
                     case 8:
                          gymTrainer();
                         break;
+                    case 9:
+                        jadwalGym();
+                        break;
                     default:
                         throw new IllegalArgumentException("input yang bener bang");
                 }
@@ -64,6 +67,7 @@ public class Main {
         System.out.println("6.Show Suplemen");
         System.out.println("7.Sell Suplemen");
         System.out.println("8.Gym Trainer");
+        System.out.println("9.Jadwal Gym");
         System.out.println("=====================================");
     }
 
@@ -203,6 +207,14 @@ public class Main {
        System.out.println("Nama :"+trainer2.name);
        System.out.println("Pengalaman :"+trainer2.Tahunpengalaman+"tahun");
        trainer2.sesiPelatihan();
+   }
+
+   public static void jadwalGym(){
+        Member jadwal1 = new Member();
+       jadwal1.Jadwal();
+
+       Gym jadwal2 = new Gym();
+       jadwal2.Jadwal();
    }
 }
 
