@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.ArrayList;
 public class Suplemen {
     public int id;
     public String name;
